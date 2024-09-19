@@ -74,7 +74,7 @@ main img {
   transition: 0.3s ease;
 }
 .row .new article {
-  margin-left: 80px;
+  margin-left: 10px;
   background-color: hsl(240, 100%, 5%);
   color: white;
   padding: 20px;
