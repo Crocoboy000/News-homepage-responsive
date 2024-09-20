@@ -34,7 +34,7 @@ main {
 
 main .question img {
   max-width: 100%;
-  height: 300px !important;
+  height: auto !important;
 }
 .row .question h1 {
   font-size: 60px;
@@ -77,6 +77,13 @@ main .question img {
   letter-spacing: 3px;
   text-transform: uppercase;
   transition: 0.3s ease;
+}
+.row .question article p button:hover {
+  background-color: hsl(240, 100%, 5%);
+  color: white;
+  transition: 0.3s ease;
+  letter-spacing: 1px;
+  border-radius: 10px;
 }
 .row .new article {
   margin-left: 10px;
