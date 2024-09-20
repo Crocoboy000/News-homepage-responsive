@@ -130,10 +130,11 @@ main .question img {
 .cards .card-title {
   font-size: 35px;
   color: hsl(5, 85%, 63%) !important;
+  font-weight: bold !important;
 }
 
 .cards h2 {
-  font-size: 17px;
+  font-size: 18px;
   font-weight: bold !important;
 }
 
