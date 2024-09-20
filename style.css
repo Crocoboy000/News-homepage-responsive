@@ -32,9 +32,9 @@ main {
   margin-top: 20px;
 }
 
-main img {
-  max-width: 700px;
-  height: 300px;
+main .question img {
+  max-width: 100%;
+  height: 300px !important;
 }
 .row .question h1 {
   font-size: 60px;
@@ -48,10 +48,15 @@ main img {
   margin-top: 20px;
   width: 100%;
 }
+.question {
+  box-sizing: border-box;
+  overflow: hidden;
+}
 .row .question article {
   margin-top: 20px;
   display: flex;
-  min-width: 700px;
+  width: auto;
+  overflow-wrap: break-word;
   justify-content: space-between;
 }
 
@@ -95,11 +100,15 @@ main img {
   color: gray;
   margin-bottom: 30px;
 }
+
 .cards {
   width: 100%;
-  height: 130px;
   margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
+
 .cards div {
   display: flex;
   justify-content: space-between;
@@ -111,18 +120,133 @@ main img {
   width: 180px;
   height: 130px;
 }
+
 .cards div article {
   max-height: 130px;
   width: 500px;
   margin-bottom: 30px;
 }
+
 .cards .card-title {
   font-size: 35px;
   color: hsl(5, 85%, 63%) !important;
 }
+
 .cards h3 {
   font-size: 17px;
 }
+
 header i {
+  width: 0;
+}
+header i svg {
   display: none;
+}
+
+/* .navmenu {
+  display: none !important;
+}
+.navmenu.show {
+  display: block !important;
+  width: 100%;
+  background-color: hsl(36, 100%, 99%);
+  height: 100vh;
+  padding: 10px;
+  z-index: 9;
+  display: flex;
+}
+
+.navmenu ul {
+  margin-top: 90px;
+  height: 100px;
+}
+.navmenu ul li a {
+  text-decoration: none;
+  color: black;
+  line-height: 60px;
+  cursor: pointer;
+}
+.navmenu i svg {
+  margin-left: 200px !important;
+}
+.navmenu .shadowside {
+  width: 35%;
+  height: 100vh;
+  background-color: gray !important;
+  z-index: 8;
+} */
+
+/* Basic styles for the navmenu */
+.navmenu {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px; /* Adjust width as needed */
+  height: 100%;
+  background-color: #fff; /* Background color */
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(100%); /* Hide off screen */
+}
+
+.navmenu.show {
+  display: block; /* Show when the class 'show' is added */
+  transform: translateX(0); /* Slide in */
+}
+
+.shadowside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: calc(100% - 250px); /* Adjust to match the navmenu width */
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 999; /* Below the navmenu */
+  display: none;
+}
+
+.navmenu.show + .shadowside {
+  display: block; /* Show the shadow when navmenu is visible */
+}
+
+/* List styles */
+.navmenu ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 80px;
+}
+
+.navmenu li {
+  margin: 20px 0;
+}
+
+.navmenu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px; /* Adjust font size as needed */
+  transition: color 0.3s ease;
+}
+
+.navmenu a:hover {
+  color: #000;
+}
+
+/* Close button styles */
+#close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+#close svg {
+  fill: #00001a;
+  transition: fill 0.3s ease;
+}
+
+#close:hover svg {
+  fill: #ff0000; /* Change color on hover */
 }

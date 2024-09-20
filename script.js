@@ -6,3 +6,22 @@ addEventListener("resize", () => {
   }
   console.log(innerWidth);
 });
+const menuButton = document.getElementById("menu");
+const closeButton = document.getElementById("close");
+const navMenu = document.querySelector(".navmenu");
+const shadowSide = document.querySelector(".shadowside");
+
+menuButton.addEventListener("click", () => {
+  navMenu.classList.toggle("show");
+  shadowSide.classList.toggle("show");
+});
+
+closeButton.addEventListener("click", () => {
+  navMenu.classList.remove("show");
+  shadowSide.classList.remove("show");
+});
+
+shadowSide.addEventListener("click", () => {
+  navMenu.classList.remove("show");
+  shadowSide.classList.remove("show");
+});

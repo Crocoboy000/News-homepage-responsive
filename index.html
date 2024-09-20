@@ -29,12 +29,27 @@
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
-      @media (max-width: 768px) {
-        header i {
-          display: block;
+      @media (max-width: 900px) {
+        header i svg {
+          display: block !important;
+          width: 20px;
         }
         header ul li a {
           display: none;
+        }
+        .question {
+          padding: 10px;
+        }
+        .row .question article {
+          flex-wrap: wrap;
+        }
+        .cards {
+          flex-wrap: wrap;
+          flex-direction: column;
+          margin-top: 20px;
+        }
+        .cards article {
+          min-width: max-content;
         }
       }
     </style>
@@ -42,6 +57,24 @@
   </head>
   <body>
     <div class="container">
+      <section class="navmenu">
+        <div class="shadowside"></div>
+        <ul>
+          <li><a href="#"> Home</a></li>
+          <li><a href="#"> New</a></li>
+          <li><a href="#"> Popular</a></li>
+          <li><a href="#"> Trending</a></li>
+          <li><a href="#"> Categories</a></li>
+        </ul>
+        <i id="close">
+          <svg width="32" height="31" xmlns="http://www.w3.org/2000/svg">
+            <g fill="#00001A" fill-rule="evenodd">
+              <path d="m2.919.297 28.284 28.284-2.122 2.122L.797 2.419z" />
+              <path d="M.797 28.581 29.081.297l2.122 2.122L2.919 30.703z" />
+            </g>
+          </svg>
+        </i>
+      </section>
       <header class="">
         <a href="#"><img src="./assets/images/logo.svg" alt="News logo" /></a>
         <ul>
@@ -51,7 +84,7 @@
           <li><a href="#"> Trending</a></li>
           <li><a href="#"> Categories</a></li>
         </ul>
-        <i>
+        <i id="menu">
           <svg width="40" height="17" xmlns="http://www.w3.org/2000/svg">
             <g fill="#00001A" fill-rule="evenodd">
               <path d="M0 0h40v3H0zM0 7h40v3H0zM0 14h40v3H0z" />
@@ -96,7 +129,7 @@
           </div>
         </div>
         <div class="row cards">
-          <div class="col-md-4 col-sm-12">
+          <div class="col-lg-4 col-md-6 col-sm-12">
             <img src="assets/images/image-retro-pcs.jpg" />
             <article>
               <h1 class="card-title">01</h1>
@@ -106,7 +139,7 @@
               </p>
             </article>
           </div>
-          <div class="col-md-4 col-sm-12">
+          <div class="col-lg-4 col-md-6 col-sm-12">
             <img src="assets/images/image-top-laptops.jpg" />
             <article>
               <h1 class="card-title">02</h1>
@@ -116,7 +149,7 @@
               </p>
             </article>
           </div>
-          <div class="col-md-4 col-sm-12">
+          <div class="col-lg-4 col-md-6 col-sm-12">
             <img src="assets/images/image-gaming-growth.jpg" />
             <article>
               <h1 class="card-title">03</h1>
