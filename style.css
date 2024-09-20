@@ -132,8 +132,9 @@ main .question img {
   color: hsl(5, 85%, 63%) !important;
 }
 
-.cards h3 {
+.cards h2 {
   font-size: 17px;
+  font-weight: bold !important;
 }
 
 header i {
