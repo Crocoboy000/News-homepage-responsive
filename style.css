@@ -142,77 +142,41 @@ header i {
 header i svg {
   display: none;
 }
-
-/* .navmenu {
-  display: none !important;
-}
-.navmenu.show {
-  display: block !important;
-  width: 100%;
-  background-color: hsl(36, 100%, 99%);
-  height: 100vh;
-  padding: 10px;
-  z-index: 9;
-  display: flex;
-}
-
-.navmenu ul {
-  margin-top: 90px;
-  height: 100px;
-}
-.navmenu ul li a {
-  text-decoration: none;
-  color: black;
-  line-height: 60px;
-  cursor: pointer;
-}
-.navmenu i svg {
-  margin-left: 200px !important;
-}
-.navmenu .shadowside {
-  width: 35%;
-  height: 100vh;
-  background-color: gray !important;
-  z-index: 8;
-} */
-
-/* Basic styles for the navmenu */
 .navmenu {
-  display: none; /* Initially hidden */
+  display: none;
   position: fixed;
   top: 0;
   right: 0;
-  width: 250px; /* Adjust width as needed */
+  width: 250px;
   height: 100%;
-  background-color: #fff; /* Background color */
+  background-color: #fff;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   padding: 20px;
   transition: transform 0.3s ease-in-out;
-  transform: translateX(100%); /* Hide off screen */
+  transform: translateX(100%);
 }
 
 .navmenu.show {
-  display: block; /* Show when the class 'show' is added */
-  transform: translateX(0); /* Slide in */
+  display: block;
+  transform: translateX(0);
 }
 
 .shadowside {
   position: fixed;
   top: 0;
   left: 0;
-  width: calc(100% - 250px); /* Adjust to match the navmenu width */
+  width: calc(100% - 250px);
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  z-index: 999; /* Below the navmenu */
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
   display: none;
 }
 
 .navmenu.show + .shadowside {
-  display: block; /* Show the shadow when navmenu is visible */
+  display: block;
 }
 
-/* List styles */
 .navmenu ul {
   list-style-type: none;
   padding: 0;
@@ -226,7 +190,7 @@ header i svg {
 .navmenu a {
   text-decoration: none;
   color: #333;
-  font-size: 18px; /* Adjust font size as needed */
+  font-size: 18px;
   transition: color 0.3s ease;
 }
 
@@ -234,7 +198,6 @@ header i svg {
   color: #000;
 }
 
-/* Close button styles */
 #close {
   position: absolute;
   top: 20px;
@@ -248,5 +211,5 @@ header i svg {
 }
 
 #close:hover svg {
-  fill: #ff0000; /* Change color on hover */
+  fill: #ff0000;
 }
